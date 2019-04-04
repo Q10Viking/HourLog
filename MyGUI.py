@@ -8,7 +8,7 @@ class MyGUI(tk.Tk):
     def __init__(self):
         super().__init__()
         size = 500
-        self.width = size*0.618
+        self.width = size*0.618+80
         self.height = size*0.382
         self.title("每小时记录")
 
@@ -35,6 +35,8 @@ class MyGUI(tk.Tk):
         # handle 关闭事件
         self.protocol("WM_DELETE_WINDOW", self.on_closing)
         self.bind('<Return>',self.commit_message)
+        # 两分钟后关闭
+        self.after(120000,lambda : self.destroy())
 
     def center_window(self):
         '''

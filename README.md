@@ -2,7 +2,11 @@
 
 > 在电脑上工作一小时，记录自己的所感所想，一些小总结
 
-数据形式以: **日期**，**时间**，**记录**，存储在csv文件中，每个月存储一个csv文件
+![](./imgs/app.png)
+
+1. 数据形式以: **日期**，**时间**，**记录**，存储在csv文件中，每个月存储一个csv文件
+2. 运行两分钟会自动关闭
+
 
 ## 环境支持
 
@@ -20,10 +24,27 @@ C:\python37\python.exe
 
 ## ubuntu下定时执行
 
-```
-* * * * * export DISPLAY=:0 && cd /home/hzz/Desktop/github/HourLog && /usr/bin/python3 APP.py >> tty2
+1. 在自己的HOME目录下创建一个文件，如**hzzcron**,写入定时计划如下
+
+
+> 每在一小时的0分弹出窗口
 
 ```
+0 */1 * * * export DISPLAY=:0 && cd /home/hzz/Desktop/github/HourLog && /usr/bin/python3 APP.py >> tty2
+
+```
+
+2. 加入到crontab中
+
+> crontab hzzcon
+
+3. 查看任务
+
+> crontab -l
+
+4. 删除任务
+
+> crontab -r
 
 
 ## crontab格式
