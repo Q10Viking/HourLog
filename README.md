@@ -18,10 +18,15 @@ C:\python37\python.exe
 
 > python App.py
 
-## windows下定时执行
+## ubuntu下定时执行
 
-[Youtube-video: windows下计划任务定时执行](https://www.youtube.com/watch?v=n2Cr_YRQk7o)
+```
+* * * * * export DISPLAY=:0 && cd /home/hzz/Desktop/github/HourLog && /usr/bin/python3 APP.py >> tty2
+
+```
 
 
+## crontab格式
 
+[测试网站](https://crontab.guru/)
 
