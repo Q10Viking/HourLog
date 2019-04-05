@@ -35,8 +35,8 @@ class MyGUI(tk.Tk):
         # handle 关闭事件
         self.protocol("WM_DELETE_WINDOW", self.on_closing)
         self.bind('<Return>',self.commit_message)
-        # 两分钟后关闭
-        self.after(120000,lambda : self.destroy())
+        # 三十分钟后关闭
+        self.after(1800000,lambda : self.destroy())
 
     def center_window(self):
         '''
