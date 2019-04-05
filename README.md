@@ -32,7 +32,7 @@ C:\python37\python.exe
 > 每在一小时的0分弹出窗口
 
 ```
-0 */1 * * * export DISPLAY=:0 && cd /home/hzz/Desktop/github/HourLog && /usr/bin/python3 APP.py >> tty2
+0 */1 * * * export DISPLAY=:0 && cd /home/hzz/Desktop/github/HourLog && /usr/bin/python3 APP.py 
 
 ```
 
