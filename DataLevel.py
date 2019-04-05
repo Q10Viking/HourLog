@@ -45,6 +45,7 @@ def upload_github(bj_time):
     logging.info("已经提交到github")
 
 if __name__ == "__main__":
+    # 同步到github
     utc_dt = datetime.utcnow().replace(tzinfo=timezone.utc)
     bj_dt = utc_dt.astimezone(timezone(timedelta(hours=8)))
 
