@@ -26,7 +26,7 @@ def store_date(content):
     with open(fname_csv,"a+") as f:
         f.write(row)
     logging.info("存储成功")
-    upload_github(bj_time)
+    #upload_github(bj_time)
 
 
 def create_file_csv(filename):
@@ -45,5 +45,9 @@ def upload_github(bj_time):
     logging.info("已经提交到github")
 
 if __name__ == "__main__":
-    store_date("test")
+    utc_dt = datetime.utcnow().replace(tzinfo=timezone.utc)
+    bj_dt = utc_dt.astimezone(timezone(timedelta(hours=8)))
+
+    bj_time = bj_dt.strftime("%H:%M:%S")
+    upload_github(bj_time)
 
